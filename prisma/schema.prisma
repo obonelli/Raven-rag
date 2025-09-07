@@ -1,0 +1,32 @@
+generator db {
+  provider        = "prisma-client-py"
+  interface       = "asyncio"
+  previewFeatures = ["fullTextIndex"]  // ⬅️ necesario para @@fulltext
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Document {
+  id        String   @id @default(cuid())
+  source    String
+  path      String?
+  title     String?
+  createdAt DateTime @default(now())
+  chunks    Chunk[]
+}
+
+model Chunk {
+  id         String   @id @default(cuid())
+  docId      String
+  index      Int
+  text       String   @db.Text
+  embedding  Bytes
+  createdAt  DateTime @default(now())
+
+  document   Document @relation(fields: [docId], references: [id], onDelete: Cascade)
+
+  @@fulltext([text])
+}

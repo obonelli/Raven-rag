@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+prisma==0.15.0
+langchain
+langchain-community
+langchain-openai
+openai
+numpy
+rank-bm25
+python-multipart
+pydantic
