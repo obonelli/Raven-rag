@@ -1,66 +1,79 @@
-# ───── Python ─────
+# --- Python ---
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.pdb
+*.so
+*.egg
 *.egg-info/
 .eggs/
+*.log
+*.pot
+*.pyc
+*.pkl
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
 *.manifest
 *.spec
 
-# Virtual envs
-.env
-.venv/
-env/
-venv/
+# Unit test / coverage reports
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+htmlcov/
 
-# ───── IDE / Editor ─────
-.vscode/
-.idea/
-*.swp
-*~
-
-# ───── Logs & temp ─────
-*.log
-*.tmp
-*.bak
-*.pid
-*.seed
-*.out
-
-# ───── OS files ─────
-.DS_Store
-Thumbs.db
-
-# ───── Docker ─────
-# evita subir volúmenes o archivos de runtime
-**/data/
-**/volumes/
-**/tmp/
-**/cache/
-**/.docker/
-
-# Docker build artifacts
-*.tar
-*.img
-*.lock
-
-# ───── Node (si usas front integrado) ─────
+# --- Node / Prisma ---
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.pnp/
+.pnp.js
 
-# ───── Environment variables ─────
-.env.local
+# Prisma
+prisma/migrations/
+*.db
+*.sqlite
+
+# --- Environment & Secrets ---
+.env
 .env.*.local
 *.env
+*.env.local
 
-# ───── Coverage / Testing ─────
-.coverage
-coverage/
-.pytest_cache/
-htmlcov/
-.tox/
-.mypy_cache/
+# --- IDE & OS ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
