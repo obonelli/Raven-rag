@@ -1,0 +1,22 @@
+# --- Excluir deps, builds y cobertura ---
+node_modules/**        linguist-vendored
+dist/**                linguist-vendored
+build/**               linguist-vendored
+coverage/**            linguist-vendored
+public/**              linguist-vendored
+
+# --- Python: entornos y cachés ---
+.venv/**               linguist-vendored
+venv/**                linguist-vendored
+**/__pycache__/**      linguist-vendored
+*.pyc                  linguist-vendored
+
+# --- Código generado / migraciones ---
+prisma/migrations/**   linguist-generated
+**/*.min.*             linguist-generated
+**/*.map               linguist-generated
+
+# --- Datos y assets pesados (si existen) ---
+data/**                linguist-vendored
+assets/**              linguist-vendored
+**/*.ipynb             linguist-vendored
