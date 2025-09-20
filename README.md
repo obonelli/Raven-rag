@@ -1,4 +1,4 @@
-# Raven RAG — Private AI Search (Python + MySQL)
+# Raven RAG — Private AI Search (Python + MySQL) [🌐 Live Demo ↗](https://raven-rag.onrender.com/docs#/)
 
 Raven RAG is a lightweight **Retrieval-Augmented Generation (RAG)** backend built with **FastAPI**, **Prisma**, **MySQL**, and **LangChain**.
 It ingests text into chunks, stores embeddings directly in MySQL, and performs **hybrid search** (FULLTEXT + vector similarity).
